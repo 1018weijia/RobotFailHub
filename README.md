@@ -1,12 +1,12 @@
 # RobotFailHub
 
-一个持续更新的具身智能与机器人学习数据集索引，重点收集带有进度标注、失败轨迹、失败恢复轨迹和子任务标注的数据，用于失败检测、进度估计、奖励设计的长时程任务分解研究。
+一个持续更新的具身智能数据集索引，重点收集带有进度标注、失败轨迹、失败恢复轨迹和子任务标注的数据，用于失败检测、进度估计、强化学习奖励设计的长时程任务分解研究。
 
 ## 数据集清单
 
-| Dataset | Date | Description | Domain | Modality | Size| Progress Annotation | Failure Trajectory or Recovery Trajectory | Subtask Annotation | Failure Taxonomy | Download Link |
+| Dataset | Date | Description | Domain | Modality | Size| Progress Annotation | Failure or Recovery Trajectory | Subtask Annotation | Failure Taxonomy | Download Link |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 数据集 | 发布时间 | 覆盖的机器人类型和任务种类描述 | 机器人 / 人类 + 真实/仿真 | 视频 + 状态 + 动作 | GB | 有无 | 只有失败还是包含恢复动作 | 有无 | 有无 | 下载链接 |
+| 名称 | 发布时间 | 覆盖的机器人类型和任务种类 | Robot/Human + Real/Sim | obs+state+action | GB | 有无 | 只有失败还是包含恢复动作 | 有无 | 有无 | 下载链接 |
 
 
 ## 贡献与维护
