@@ -6,7 +6,7 @@
 | **Paper** | [From Passive Observer to Active Critic: RL Elicits Process Reasoning for Robotic Manipulation](https://arxiv.org/abs/2603.15600) |
 | **Domain** | Robot / Real + Sim |
 | **Modality** | video, initial/current frame, language, CoT progress (1–100) |
-| **Size** | Bench 23.7k；SFT ~116k；RL ~182k（官方描述） |
+| **Size** | Bench 23.7k；SFT 116.8k；RL 328.5k（HF 标注行数） |
 | **Progress Annotation** | 有 — 细粒度数值 progress + CoT |
 | **Failure or Recovery Trajectory** | 有 — 含失败检测与 OOD 真实人形场景 |
 | **Subtask Annotation** | 待核验 |
