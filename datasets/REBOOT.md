@@ -29,7 +29,7 @@
 
 ```bash
 hf download REBOOT26/sample_recovery-demonstration --repo-type dataset \
-  --local-dir /mnt/data/yangky/datasets/robot_fail_hub/REBOOT/sample_recovery-demonstration
+  --local-dir ../datasets/REBOOT/sample_recovery-demonstration
 ```
 
 ## Notes

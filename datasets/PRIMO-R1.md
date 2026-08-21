@@ -22,7 +22,7 @@ PRIMO R1（Process Reasoning Induced Monitoring）将 video MLLM 训练为 activ
 - 模型: https://huggingface.co/LeonOverload/PRIMO-R1-7B
 - Benchmark JSON（仅标注）: https://huggingface.co/datasets/LeonOverload/primo-bench-json
 - 媒体（视频/帧）: https://huggingface.co/datasets/LeonOverload/primo-video-media
-- SFT CoT 数据: https://huggingface.co/datasets/LeonOverload/primo-cot-json（待核验 repo 名）
+- SFT CoT 数据: https://huggingface.co/datasets/LeonOverload/primo-sft-json
 - RL 数据: https://huggingface.co/datasets/LeonOverload/primo-rl-json
 - 项目页: https://10-oasis-01.github.io/primo-r1-website/
 
@@ -38,4 +38,4 @@ PRIMO R1（Process Reasoning Induced Monitoring）将 video MLLM 训练为 activ
 ## Notes
 
 - `primo-bench-json` 不含媒体，需配合 `primo-video-media` 本地解压。
-- 本机已复现路径：`/mnt/data/yangky/test/real_robot_RL/PRIMO_R1/official/`
+- Bench / media 本地放置建议：`../datasets/PRIMO-R1/{primo-bench-json,primo-video-media}/`

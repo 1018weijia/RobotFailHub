@@ -30,4 +30,4 @@ X-Humanoid 发布的真实机器人 value-guided RL 数据集，覆盖芯片插�
 ## Notes
 
 - 与 DenseReward、RoboReward 同属 2026 年 dense/progress reward 方向高优先级数据集。
-- 本地镜像建议路径：`/mnt/data/yangky/datasets/robot_fail_hub/Robo-ValueRL`
+- 本地镜像建议路径：`../datasets/Robo-ValueRL`

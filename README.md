@@ -33,24 +33,24 @@
 | Failure Taxonomy | 是否有失败类型 taxonomy |
 | Download Link | 官方下载入口 |
 
-## 本地整理（100.74.87.113）
+## 本地镜像（可选）
 
-如需在本机镜像 HF 数据集，建议统一放到：
+本仓库只存元信息。如需本机缓存 HF 数据，建议放到相对目录：
 
 ```text
-/mnt/data/yangky/datasets/robot_fail_hub/
+../datasets/<DatasetName>/
 ```
 
-示例（需先 `huggingface-cli login`）：
+示例（需先 `huggingface-cli login`，在仓库根目录执行）：
 
 ```bash
-hf download X-Humanoid/Robo-ValueRL --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/Robo-ValueRL
-hf download teetone/RoboReward --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/RoboReward
-hf download RoboArena/DataDump_07-17-2026 --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/RoboArena
+hf download X-Humanoid/Robo-ValueRL --repo-type dataset --local-dir ../datasets/Robo-ValueRL
+hf download teetone/RoboReward --repo-type dataset --local-dir ../datasets/RoboReward
+hf download RoboArena/DataDump_07-17-2026 --repo-type dataset --local-dir ../datasets/RoboArena
 # Dopamine 为 gated dataset，需先在 HF 申请访问
-hf download tanhuajie2001/Robo-Dopamine-GRM-Dataset --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/Dopamine-GRM
-hf download LeonOverload/primo-bench-json --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/PRIMO-R1/primo-bench-json
-hf download paulpacaud/Guardian-FailCoT-OOD-datasets --repo-type dataset --local-dir /mnt/data/yangky/datasets/robot_fail_hub/Guardian-OOD
+hf download tanhuajie2001/Robo-Dopamine-GRM-Dataset --repo-type dataset --local-dir ../datasets/Dopamine-GRM
+hf download LeonOverload/primo-bench-json --repo-type dataset --local-dir ../datasets/PRIMO-R1/primo-bench-json
+hf download paulpacaud/Guardian-FailCoT-OOD-datasets --repo-type dataset --local-dir ../datasets/Guardian-OOD
 ```
 
 ## 贡献与维护
