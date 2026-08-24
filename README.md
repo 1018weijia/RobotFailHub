@@ -12,10 +12,29 @@
 | [DenseReward](datasets/DenseReward.md) | 2026-07 | 27k episode、756 万帧 dense reward；仿真失败合成 | Robot+Human / Sim+Real | video + language + dense reward | 待核验（27k episodes） | 有（帧级 0–1） | 有（collision/miss/fall/recover） | 有（五阶段 manipulation） | 有 | [Project](https://dense-reward.github.io/) · [Models HF](https://huggingface.co/densereward) |
 | [RoboReward](datasets/RoboReward.md) | 2026-01 | 4.5 万+ 真实机器人 rollout 进度评分；含 RoboRewardBench | Robot / Real | video + language + discrete reward | 待核验（54k examples） | 有（episode 级 1–5 分） | 有（负例/近失合成 + RoboArena 真实失败） | 无 | 无 | [HF Dataset](https://huggingface.co/datasets/teetone/RoboReward) · [Bench](https://crfm.stanford.edu/helm/robo-reward-bench/) |
 | [Dopamine-Reward / GRM](datasets/Dopamine-Reward-GRM.md) | 2025-12 | 3460 万样本、3400+ 小时；BEFORE/AFTER 相对进度 | Robot+Human / Sim+Real | multi-view image + language | ~239 GB（图像）+ 6.1 GB（JSON） | 有（hop-based relative progress） | 有（真实/仿真/人类视频混合） | 有（step-wise 离散化） | 待核验 | [HF Dataset (gated)](https://huggingface.co/datasets/tanhuajie2001/Robo-Dopamine-GRM-Dataset) |
-| [RoboArena](datasets/RoboArena.md) | 2025-06 | 分布式真实机器人策略评测；4284+ evaluation episodes | Robot / Real | video + proprio + preference | 21.7 GB（2026-07-17 snapshot） | 有（task-success score） | 有（policy rollout 含成败） | 无 | 无 | [HF DataDump](https://huggingface.co/datasets/RoboArena/DataDump_07-17-2026) · [Website](https://robo-arena.github.io/) |
+| [RoboArena](datasets/RoboArena.md) | 2025-06 | 分布式双盲真机策略评测；含 preference、feedback 与成败 rollout | Robot / Real | video + proprio/action + YAML | 3,883 sessions；10,783 policy episodes；21.7 GB | 有（task-success） | 有（公开 evaluation rollout） | 无 | 无 | [HF DataDump](https://huggingface.co/datasets/RoboArena/DataDump_07-17-2026) · [Website](https://robo-arena.github.io/) |
+| [PhAIL](datasets/PhAIL.md) | 2026-05 | Franka FR3 真机 VLA 评测；公开视频、telemetry、结果与 safety-stop run | Robot / Real | multi-view video + state/action + events | v1.0：594 eval runs；352 demos（~12 GB） | 有（completion / time / UPH） | 有（失败/超时/safety stop；无 corrective action） | 无 | 有（粗粒度 outcome） | [Release](https://phail.ai/releases/v1.0) · [Paper](https://arxiv.org/abs/2605.29710) |
+| [ManipArena](datasets/ManipArena.md) | 2026-03 | 20 个 reasoning-oriented 真机任务；公开 expert demonstrations | Robot / Real + Sim | 3×RGB + state/action + motor + language | 10,812 trajectories；13.5M frames；~188 h | 无统一帧级进度 | 无（公开 real 数据为 expert demos） | 有（partial-credit + 三层语言描述） | 无 | [HF (gated)](https://huggingface.co/datasets/ManipArena/maniparena-dataset) · [Paper](https://arxiv.org/abs/2603.28545) |
+| [RoboChallenge Table30 v2](datasets/RoboChallenge-Table30v2.md) | 2026-05 | 30 个任务、4 种 embodiment 的在线真机 benchmark 配套数据 | Robot / Real | multi-view video + robot state + metadata | ~1.01 TB | 有（task score / grading points） | 待核验（非统一 eval rollout dump） | 有（评分点） | 无 | [HF](https://huggingface.co/datasets/RoboChallenge/Table30v2) · [Website](https://robochallenge.ai/) |
+| [VLA-REPLICA](datasets/VLA-REPLICA.md) | 2026-05 | 低成本 SO-101 可复现实机 VLA benchmark；ID/OOD reference scenes | Robot / Real | top/wrist RGB + state/action + language | 10 tasks；500 demos；90 scene refs；~1.97 GB | 无 | 无公开统一 test rollout dump | 无 | 无 | [HF](https://huggingface.co/datasets/HenryZhang/VLAReplica_SFT_data) · [GitHub](https://github.com/IRVLUTD/VLAReplica) |
+| [RoboDojo Real](datasets/RoboDojo-Real.md) | 2026-07 | 18 个真机任务、3 种 embodiment；RealEval 远程评测 | Robot / Real + Sim | task/config assets + result artifacts | 18 real tasks；bulk rollout 待核验 | 有（评测结果级） | 未确认公开 bulk real rollout | 待核验 | 无 | [Website](https://robodojo-benchmark.com/) · [GitHub](https://github.com/RoboDojo-Benchmark/RoboDojo) |
+| [FurnitureBench](datasets/FurnitureBench.md) | 2023-05 | 长时程真实家具装配 benchmark；公开成功 demonstrations | Robot / Real | RGB + robot state + action + reward/skill | 5,100 demos；219.6 h；~1.18 TB | 有（reward / skill flags） | 无（成功 demos） | 有（skill flags） | 无 | [Dataset](https://clvrai.github.io/furniture-bench/docs/tutorials/dataset.html) · [GitHub](https://github.com/clvrai/furniture-bench) |
+| [TriFinger RL](datasets/TriFinger-RL.md) | 2023-05 | Push/Lift 真实机器人 offline RL 数据；多质量 behavior policy | Robot / Real + Sim | Zarr state/action/reward + optional RGB | >100 h；单个 real image dataset 46–100 GB | 有（reward / return） | 有次优行为（无 recovery 标签） | 无 | 无 | [Data (DOI)](https://doi.org/10.17617/3.DXZ7TL) · [Docs](https://webdav.tuebingen.mpg.de/trifinger-rl/docs/datasets/index.html) |
 | [PRIMO-R1](datasets/PRIMO-R1.md) | 2026-03 | Process reasoning critic；116.8k SFT + 328.5k RL；23.7k bench | Robot / Real + Sim | video + init/current frame + CoT progress | Bench 23.7k；媒体 ~78 GB | 有（1–100 + CoT） | 有（失败检测 + real-humanoid OOD） | 待核验 | 无 | [HF Collection](https://huggingface.co/collections/LeonOverload/primo-r1) · [Bench JSON](https://huggingface.co/datasets/LeonOverload/primo-bench-json) |
 | [REBOOT](datasets/REBOOT.md) | 2026-05 | REBOOT26 双臂 WidowX recovery 轨迹；LeRobot v3.0 | Robot / Real | video + state + action | 38 task datasets | 无 | 有（recovery / remove / install） | 无 | 无 | [HF Org](https://huggingface.co/REBOOT26) |
 | [Guardian FailCoT / RoboFail](datasets/Guardian-FailCoT-RoboFail.md) | 2025-12 | FailCoT 合成失败 reasoning；RoboFail OOD 评测 | Robot / Sim + Real | multi-view image + CoT | FailCoT 待核验；RoboFail 130 scenarios | 无 | 有（planning + execution 失败） | 有 | 有 | [Guardian HF](https://huggingface.co/collections/paulpacaud/robotic-failure-detection-dataset-and-model-guardian) · [RoboFail OOD](https://huggingface.co/datasets/paulpacaud/Guardian-FailCoT-OOD-datasets) |
+
+### 真机评测数据角色（R2）
+
+为避免把“真机 benchmark 的训练集”误写成“候选策略的测试 rollout”，真机评测相关条目采用以下分级：
+
+| 分级 | 定义 | 当前条目 |
+| --- | --- | --- |
+| **R2-A** | 已公开真实 policy evaluation rollouts / logs，数据本身就是评测结果 | RoboArena、PhAIL |
+| **R2-B** | 真机 benchmark，但公开下载内容主要是 demonstrations、task/config assets 或 reference scenes；测试 rollout 需自行运行或远程评测产生 | ManipArena、RoboChallenge Table30 v2、VLA-REPLICA、RoboDojo Real、FurnitureBench |
+| **R2-C** | 真实机器人 offline benchmark 数据，与现代 VLA 在线评测分开 | TriFinger RL |
+
+各详情卡使用 `Dataset Role` 与 `R2 Classification` 明确标注。`safety stop` 只表示风险干预信号，不等同于接管后继续操作的 `corrective takeover action`。
 
 ### 字段说明
 
@@ -27,6 +46,8 @@
 | Domain | Robot/Human + Real/Sim |
 | Modality | 观测/状态/动作/语言等 |
 | Size | 官方体量或 snapshot 大小 |
+| Dataset Role | evaluation rollout、training demonstration、benchmark asset 等数据角色（详情卡字段） |
+| R2 Classification | R2-A / R2-B / R2-C 真机评测分级（详情卡字段） |
 | Progress Annotation | 是否有进度/价值/dense reward 标注 |
 | Failure or Recovery Trajectory | 仅失败，或含恢复/混合质量轨迹 |
 | Subtask Annotation | 是否有子任务/阶段标注 |
@@ -47,6 +68,8 @@
 hf download X-Humanoid/Robo-ValueRL --repo-type dataset --local-dir ../datasets/Robo-ValueRL
 hf download teetone/RoboReward --repo-type dataset --local-dir ../datasets/RoboReward
 hf download RoboArena/DataDump_07-17-2026 --repo-type dataset --local-dir ../datasets/RoboArena
+hf download ManipArena/maniparena-dataset --repo-type dataset --include "real/**" --local-dir ../datasets/ManipArena-real
+hf download HenryZhang/VLAReplica_SFT_data --repo-type dataset --local-dir ../datasets/VLA-REPLICA/SFT-data
 # Dopamine 为 gated dataset，需先在 HF 申请访问
 hf download tanhuajie2001/Robo-Dopamine-GRM-Dataset --repo-type dataset --local-dir ../datasets/Dopamine-GRM
 hf download LeonOverload/primo-bench-json --repo-type dataset --local-dir ../datasets/PRIMO-R1/primo-bench-json
