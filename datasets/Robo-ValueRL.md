@@ -6,7 +6,7 @@
 | **Paper** | [Robo-ValueRL: Reliable Value Estimation for Offline-to-Online RL](https://arxiv.org/abs/2607.09866) |
 | **Domain** | Robot / Real |
 | **Modality** | video, proprioception, action, language instruction |
-| **Size** | 240+ 小时离线 + 3000+ 在线 rollout（官方描述）；HF 视图约 79k+ 条 |
+| **Size** | 79,439 rows / **431 GB**（HF）；240 h 离线 + 3,000+ 在线 rollout |
 | **Progress Annotation** | 有 — remain_time / value-derived quality labels |
 | **Failure or Recovery Trajectory** | 有 — 成功、次优、纠正、失败混合 |
 | **Subtask Annotation** | 无 |

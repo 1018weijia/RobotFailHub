@@ -3,14 +3,14 @@
 | 字段 | 内容 |
 | --- | --- |
 | **Date** | 2025-12 |
-| **Paper** | Robo-Dopamine / GRM relative progress（待核验完整标题） |
+| **Paper** | [Robo-Dopamine: General Process Reward Modeling for High-Precision Robotic Manipulation](https://arxiv.org/abs/2512.23703) |
 | **Domain** | Robot+Human / Sim+Real |
 | **Modality** | multi-view image, language, BEFORE/AFTER pairs |
-| **Size** | ~35M samples，3400+ 小时视频；HF 约 239 GB 图像 + 6.1 GB JSON |
+| **Size** | **34,601,209 samples**（`json_all`）；3,400+ h / 100k+ trajectories / 350 tasks；HF 图像 ~239 GB + JSON ~6.1 GB |
 | **Progress Annotation** | 有 — hop-based relative progress (BEFORE/AFTER) |
 | **Failure or Recovery Trajectory** | 有 — 真实/仿真/人类视频混合 |
 | **Subtask Annotation** | 有 — step-wise 离散化 |
-| **Failure Taxonomy** | 待核验 |
+| **Failure Taxonomy** | 无（hop-based 相对进度，无独立 failure taxonomy） |
 
 ## Description
 
