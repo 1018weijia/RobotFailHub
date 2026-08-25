@@ -9,7 +9,7 @@
 | **Size** | Bench 23.7k；SFT 116.8k；RL 328.5k（HF 标注行数） |
 | **Progress Annotation** | 有 — 细粒度数值 progress + CoT |
 | **Failure or Recovery Trajectory** | 有 — 含失败检测与 OOD 真实人形场景 |
-| **Subtask Annotation** | 待核验 |
+| **Subtask Annotation** | 无 |
 | **Failure Taxonomy** | 无（RoboFail 为独立 benchmark） |
 
 ## Description

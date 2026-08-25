@@ -6,7 +6,7 @@
 | **Paper** | [DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation](https://arxiv.org/abs/2607.13033) |
 | **Domain** | Robot+Human / Sim+Real |
 | **Modality** | video, language instruction, frame-level dense reward |
-| **Size** | 27k episodes，756 万帧级标注 |
+| **Size** | **26,579 episodes / 7,560,942 frame-level samples**（论文 Table） |
 | **Progress Annotation** | 有 — 帧级 0–1 dense reward |
 | **Failure or Recovery Trajectory** | 有 — collision / miss grasp / drop / recover 等合成失败 |
 | **Subtask Annotation** | 有 — Reach / Grasp / Lift / Move / Place 五阶段 |

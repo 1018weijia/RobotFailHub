@@ -3,10 +3,10 @@
 | 字段 | 内容 |
 | --- | --- |
 | **Date** | 2026-01 |
-| **Paper** | RoboReward / RoboRewardBench（Stanford CRFM HELM） |
+| **Paper** | [RoboReward: General-Purpose Vision-Language Reward Models for Robotics](https://arxiv.org/abs/2601.00675) |
 | **Domain** | Robot / Real |
 | **Modality** | video, language, discrete episode-level reward (1–5) |
-| **Size** | ~45k train + RoboRewardBench eval set；HF 约 54k examples |
+| **Size** | **54,135 examples**（45,072 train / 6,232 val / 2,831 test RoboRewardBench） |
 | **Progress Annotation** | 有 — episode 级 1–5 进度分 |
 | **Failure or Recovery Trajectory** | 有 — 负例/近失合成 + RoboArena 真实失败 |
 | **Subtask Annotation** | 无 |

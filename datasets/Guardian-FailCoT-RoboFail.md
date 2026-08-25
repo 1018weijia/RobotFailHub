@@ -6,7 +6,7 @@
 | **Paper** | [Guardian / FailCoT (2512.01946)](https://arxiv.org/abs/2512.01946) · [REFLECT / RoboFail (2306.15724)](https://arxiv.org/abs/2306.15724) |
 | **Domain** | Robot / Sim + Real |
 | **Modality** | multi-view image, language, CoT failure reasoning |
-| **Size** | FailCoT: RLBench-Fail + BridgeDataV2-Fail + UR5-Fail（Table I）；RoboFail: 100 sim + 30 real |
+| **Size** | FailCoT **30,876 train**（RLBench 18,166 + BDV2 12,710 exec/plan 样本）；RoboFail **130 scenarios**（100 sim + 30 real） |
 | **Progress Annotation** | 无（failure verification 为主） |
 | **Failure or Recovery Trajectory** | 有 — planning + execution 成败与 reasoning trace |
 | **Subtask Annotation** | 有 — subtask 级 execution/planning 验证 |
