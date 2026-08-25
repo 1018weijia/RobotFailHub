@@ -10,6 +10,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [Robo-ValueRL](datasets/Robo-ValueRL.md) | 2026-07 | 240h 离线 + 3k+ 在线 rollout；芯片插入、积木拆解；LeRobot v2.1 + value/quality | Robot / Real | video + state + action + language | 待核验 | 有（remain_time / quality） | 有（成功/次优/纠正/失败混合） | 无 | 无 | [HF](https://huggingface.co/datasets/X-Humanoid/Robo-ValueRL) · [GitHub](https://github.com/Open-X-Humanoid/Robo-ValueRL) |
 | [DenseReward](datasets/DenseReward.md) | 2026-07 | 27k episode、756 万帧 dense reward；仿真失败合成 | Robot+Human / Sim+Real | video + language + dense reward | 待核验（27k episodes） | 有（帧级 0–1） | 有（collision/miss/fall/recover） | 有（五阶段 manipulation） | 有 | [Project](https://dense-reward.github.io/) · [Models HF](https://huggingface.co/densereward) |
+| [VLAC-Cut-FullData](datasets/VLAC-Cut-FullData.md) | 2026-06 | VLAC-Cut 全量发布；expert/nonexpert × seen/unseen 评测拆分 | Robot / Real + Sim | video/frame path + language + dense progress | ~956 GB（HF usedStorage） | 有（帧级 dense progress + semantic anchors） | 有（nonexpert/bad 失败；文本 correction plan，无执行恢复） | 有（阶段描述 + semantic anchors） | 无统一 taxonomy | [HF](https://huggingface.co/datasets/InternRobotics/VLAC-Cut-FullData) |
 | [RoboReward](datasets/RoboReward.md) | 2026-01 | 4.5 万+ 真实机器人 rollout 进度评分；含 RoboRewardBench | Robot / Real | video + language + discrete reward | 待核验（54k examples） | 有（episode 级 1–5 分） | 有（负例/近失合成 + RoboArena 真实失败） | 无 | 无 | [HF Dataset](https://huggingface.co/datasets/teetone/RoboReward) · [Bench](https://crfm.stanford.edu/helm/robo-reward-bench/) |
 | [Dopamine-Reward / GRM](datasets/Dopamine-Reward-GRM.md) | 2025-12 | 3460 万样本、3400+ 小时；BEFORE/AFTER 相对进度 | Robot+Human / Sim+Real | multi-view image + language | ~239 GB（图像）+ 6.1 GB（JSON） | 有（hop-based relative progress） | 有（真实/仿真/人类视频混合） | 有（step-wise 离散化） | 待核验 | [HF Dataset (gated)](https://huggingface.co/datasets/tanhuajie2001/Robo-Dopamine-GRM-Dataset) |
 | [RoboArena](datasets/RoboArena.md) | 2025-06 | 分布式双盲真机策略评测；含 preference、feedback 与成败 rollout | Robot / Real | video + proprio/action + YAML | 3,883 sessions；10,783 policy episodes；21.7 GB | 有（task-success） | 有（公开 evaluation rollout） | 无 | 无 | [HF DataDump](https://huggingface.co/datasets/RoboArena/DataDump_07-17-2026) · [Website](https://robo-arena.github.io/) |
@@ -32,7 +33,7 @@
 | --- | --- | --- |
 | **R2-A** | 已公开真实 policy evaluation rollouts / logs，数据本身就是评测结果 | RoboArena、PhAIL |
 | **R2-B** | 真机 benchmark，但公开下载内容主要是 demonstrations、task/config assets 或 reference scenes；测试 rollout 需自行运行或远程评测产生 | ManipArena、RoboChallenge Table30 v2、VLA-REPLICA、RoboDojo Real、FurnitureBench |
-| **R2-C** | 真实机器人 offline benchmark 数据，与现代 VLA 在线评测分开 | TriFinger RL |
+| **R2-C** | 真实机器人 offline benchmark 数据，与现代 VLA 在线评测分开 | VLAC-Cut-FullData、TriFinger RL |
 
 各详情卡使用 `Dataset Role` 与 `R2 Classification` 明确标注。`safety stop` 只表示风险干预信号，不等同于接管后继续操作的 `corrective takeover action`。
 
@@ -68,6 +69,8 @@
 hf download X-Humanoid/Robo-ValueRL --repo-type dataset --local-dir ../datasets/Robo-ValueRL
 hf download teetone/RoboReward --repo-type dataset --local-dir ../datasets/RoboReward
 hf download RoboArena/DataDump_07-17-2026 --repo-type dataset --local-dir ../datasets/RoboArena
+# VLAC-Cut-FullData 全仓约 956 GB；下例仅下载脚本与四个 test split
+hf download InternRobotics/VLAC-Cut-FullData --repo-type dataset --include "README.md" "scripts/*" "benchmark_style_all/test_*/*" --local-dir ../datasets/VLAC-Cut-FullData-eval
 hf download ManipArena/maniparena-dataset --repo-type dataset --include "real/**" --local-dir ../datasets/ManipArena-real
 hf download HenryZhang/VLAReplica_SFT_data --repo-type dataset --local-dir ../datasets/VLA-REPLICA/SFT-data
 # Dopamine 为 gated dataset，需先在 HF 申请访问
